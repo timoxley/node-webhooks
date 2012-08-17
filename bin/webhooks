@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+'use strict'
+
+var app = require('../')
+
+if (process.argv[2] === 'start') {
+  var port = process.argv[3] || 10010
+  app.listen(port)
+} else {
+  console.info(app.hashCwd())
+}
