@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "bin": {
-    "webhook": "./bin/webhook"
+    "webhooks": "./bin/webhooks"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha test/*_test.js"
