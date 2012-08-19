@@ -3,9 +3,9 @@ node-webhooks
 
 ## Easily Create Webhooks
 
-1. Create executable script called `webhook` in the directory you wish to
+1. Create a script called `webhook` in the directory you wish to
    run it from.
-2. Run `webhooks` command in same directory as `webhook` executable to
+2. Run `webhooks` command in same directory as `webhook` script to
    get the webhook key.
 3. Boot webhooks with `webhooks start`
 4. POST to your webhooks server using your webhook key, e.g.

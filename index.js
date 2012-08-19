@@ -72,4 +72,4 @@ module.exports.hashCwd = function(cwd) {
   return encodeURIComponent(encrypt(cwd || process.cwd(),  process.env.WH_SECRET || 'keyboard cat'))
 }
 
-module.exports.command = './webhook'
+module.exports.command = '/usr/bin/env sh ./webhook'

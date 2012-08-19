@@ -1,3 +1,2 @@
 #!/bin/sh
-touch it_worked
-date >> it_worked
+date > it_worked
