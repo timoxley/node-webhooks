@@ -10,7 +10,7 @@ var domain = require('domain')
 var fs = require('fs')
 var child_process = require('child_process')
 
-app.get('/:hash', function(req, res, next) {
+app.post('/:hash', function(req, res, next) {
   if (!req.params.hash) {
     console.warn('missing hash', req.params.hash)
     return res.send(404)

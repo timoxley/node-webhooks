@@ -16,27 +16,27 @@ afterEach(function(done) {
 it('decodes hashes to paths', function(done) {
   var hash = app.hashCwd()
   request(app)
-  .get('/' + hash)
+  .post('/' + hash)
   .expect(200, done)
 })
 
 it('decodes other hashes to paths', function(done) {
   var hash = app.hashCwd('/tmp')
   request(app)
-  .get('/' + hash)
+  .post('/' + hash)
   .expect(200, done)
 })
 
 it('404 for invalid hashes', function(done) {
   request(app)
-  .get('/garbage')
+  .post('/garbage')
   .expect(404, done)
 })
 
 it('runs commands at cwd', function(done) {
   var hash = app.hashCwd('/tmp')
   request(app)
-  .get('/' + hash)
+  .post('/' + hash)
   .expect(200, function(err) {
     assert.ifError(err)
     fs.exists('/tmp/testing.js', function(exists) {
